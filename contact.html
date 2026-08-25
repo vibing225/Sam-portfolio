@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — SamInnova</title>
+<meta name="description" content="Contactez Alpha Moussa Sow (SamInnova) pour une mission freelance, un stage ou un projet." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/tokens.css" />
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/components.css" />
+<link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#main">Aller au contenu</a>
+
+<header class="site-nav">
+  <div class="container">
+    <a class="brand" href="index.html">Sam<span>Innova</span></a>
+    <nav aria-label="Navigation principale">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+        <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+        <li><a href="projects/index.html" data-i18n="nav.projects">Projets</a></li>
+        <li><a href="skills.html" data-i18n="nav.skills">Compétences</a></li>
+        <li><a href="experience.html" data-i18n="nav.experience">Parcours</a></li>
+        <li><a href="contact.html" aria-current="page" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-toggle" data-lang="fr" role="group" aria-label="Choix de la langue">
+        <button class="lang-opt" data-val="fr" type="button">FR</button>
+        <button class="lang-opt" data-val="en" type="button">EN</button>
+      </div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Ouvrir le menu">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow" data-i18n="contact.eyebrow">Contact</span>
+      <h1 data-i18n="contact.title">Travaillons ensemble</h1>
+      <p class="lead" data-i18n="contact.lead">Pour une mission freelance, un stage ou simplement échanger sur un projet.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container contact-grid">
+
+      <div class="contact-info">
+        <div class="card reveal reveal-left">
+          <span class="tag tag-dim" data-i18n="contact.info.location">Localisation</span>
+          <p style="margin-top: var(--space-3);">Conakry, Guinée</p>
+        </div>
+        <div class="card reveal reveal-left" data-reveal-delay="100">
+          <span class="tag tag-dim" data-i18n="contact.info.email">Email</span>
+          <p style="margin-top: var(--space-3);"><a href="mailto:22nysam@gmail.com">22nysam@gmail.com</a></p>
+        </div>
+        <div class="card reveal reveal-left" data-reveal-delay="200">
+          <span class="tag tag-dim" data-i18n="contact.info.phone">Téléphone</span>
+          <p style="margin-top: var(--space-3);"><a href="tel:+224612522199">+224 612 522 199</a></p>
+        </div>
+      </div>
+
+      <form class="card reveal reveal-right" id="contact-form" novalidate>
+        <div class="field">
+          <label for="name" data-i18n="contact.form.name">Nom complet</label>
+          <input type="text" id="name" name="name" required />
+          <span class="field-error">Ce champ est requis.</span>
+        </div>
+        <div class="field">
+          <label for="email" data-i18n="contact.form.email">Adresse email</label>
+          <input type="email" id="email" name="email" required />
+          <span class="field-error">Ce champ est requis.</span>
+        </div>
+        <div class="field">
+          <label for="message" data-i18n="contact.form.message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+          <span class="field-error">Ce champ est requis.</span>
+        </div>
+        <button class="btn btn-primary" type="submit" data-i18n="contact.form.submit">Envoyer le message</button>
+        <p class="footer-note form-status" hidden>✓ Message prêt — le traitement serveur sera branché ultérieurement.</p>
+        <p class="footer-note" data-i18n="contact.form.note" style="margin-top: var(--space-4);">Le formulaire sera relié à un traitement côté serveur lors de la phase back-end.</p>
+      </form>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="brand" href="index.html">Sam<span>Innova</span></a>
+      <p class="footer-note" data-i18n="footer.built">Conçu &amp; développé par SamInnova.</p>
+    </div>
+    <nav aria-label="Liens de pied de page">
+      <ul class="footer-links">
+        <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+        <li><a href="projects/index.html" data-i18n="nav.projects">Projets</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        <li><a href="mailto:22nysam@gmail.com">22nysam@gmail.com</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container">
+    <p class="footer-note">© <span id="current-year">2026</span> SamInnova. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

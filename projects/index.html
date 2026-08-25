@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Projets — SamInnova</title>
+<meta name="description" content="Projets réalisés par Alpha Moussa Sow (SamInnova) — section connectée à la base de données." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="../css/tokens.css" />
+<link rel="stylesheet" href="../css/base.css" />
+<link rel="stylesheet" href="../css/components.css" />
+<link rel="stylesheet" href="../css/pages.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#main">Aller au contenu</a>
+
+<header class="site-nav">
+  <div class="container">
+    <a class="brand" href="../index.html">Sam<span>Innova</span></a>
+    <nav aria-label="Navigation principale">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+        <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+        <li><a href="index.html" aria-current="page" data-i18n="nav.projects">Projets</a></li>
+        <li><a href="../skills.html" data-i18n="nav.skills">Compétences</a></li>
+        <li><a href="../experience.html" data-i18n="nav.experience">Parcours</a></li>
+        <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-toggle" data-lang="fr" role="group" aria-label="Choix de la langue">
+        <button class="lang-opt" data-val="fr" type="button">FR</button>
+        <button class="lang-opt" data-val="en" type="button">EN</button>
+      </div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Ouvrir le menu">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow" data-i18n="projects.eyebrow">Projets</span>
+      <h1 data-i18n="projects.title">Travaux réalisés</h1>
+      <p class="lead" data-i18n="projects.lead">Cette section sera connectée à la base de données du site. Les projets réels (Amogemio, Brasserie Artemis, SamiSpa, Menus Digitaux, Gestion_Immo) seront ajoutés ici avec leurs détails, captures d'écran et liens.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+
+      <div class="filter-tabs reveal reveal-up" role="group" aria-label="Filtrer les projets par catégorie">
+        <button class="filter-tab" type="button" aria-pressed="true" data-i18n="projects.filter.all">Tous</button>
+        <button class="filter-tab" type="button" aria-pressed="false" data-i18n="projects.filter.business">Sites vitrine</button>
+        <button class="filter-tab" type="button" aria-pressed="false" data-i18n="projects.filter.booking">Réservation</button>
+        <button class="filter-tab" type="button" aria-pressed="false" data-i18n="projects.filter.menu">Menu digital</button>
+        <button class="filter-tab" type="button" aria-pressed="false" data-i18n="projects.filter.django">Application Django</button>
+      </div>
+
+      <!--
+        NOTE FOR BACKEND PHASE:
+        This grid renders from the `projects` MySQL table (see 02-BUILD-SPEC).
+        Do not hardcode project cards here — pull title_fr/title_en, category,
+        description_fr/en, tech_stack, screenshot_url, live_url, github_url,
+        status, display_order via prepared statements.
+        Until real data exists, this stays an empty/loading state — no
+        fabricated project cards, per project content rules.
+      -->
+      <div class="placeholder-card reveal reveal-up" data-reveal-delay="100">
+        <span class="eyebrow" data-i18n="projects.empty.title">Contenu à venir</span>
+        <p style="margin-top: var(--space-3);" data-i18n="projects.empty.text">Les projets seront chargés depuis la base de données une fois le back-end connecté.</p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="brand" href="../index.html">Sam<span>Innova</span></a>
+      <p class="footer-note" data-i18n="footer.built">Conçu &amp; développé par SamInnova.</p>
+    </div>
+    <nav aria-label="Liens de pied de page">
+      <ul class="footer-links">
+        <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+        <li><a href="index.html" data-i18n="nav.projects">Projets</a></li>
+        <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+        <li><a href="mailto:22nysam@gmail.com">22nysam@gmail.com</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container">
+    <p class="footer-note">© <span id="current-year">2026</span> SamInnova. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
+  </div>
+</footer>
+
+<script src="../js/i18n.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

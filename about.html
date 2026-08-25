@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>À propos — SamInnova</title>
+<meta name="description" content="Parcours d'Alpha Moussa Sow, du diplôme MIAGE au lancement de SamInnova." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/tokens.css" />
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/components.css" />
+<link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#main">Aller au contenu</a>
+
+<header class="site-nav">
+  <div class="container">
+    <a class="brand" href="index.html">Sam<span>Innova</span></a>
+    <nav aria-label="Navigation principale">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+        <li><a href="about.html" aria-current="page" data-i18n="nav.about">À propos</a></li>
+        <li><a href="projects/index.html" data-i18n="nav.projects">Projets</a></li>
+        <li><a href="skills.html" data-i18n="nav.skills">Compétences</a></li>
+        <li><a href="experience.html" data-i18n="nav.experience">Parcours</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-toggle" data-lang="fr" role="group" aria-label="Choix de la langue">
+        <button class="lang-opt" data-val="fr" type="button">FR</button>
+        <button class="lang-opt" data-val="en" type="button">EN</button>
+      </div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Ouvrir le menu">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow" data-i18n="about.eyebrow">À propos</span>
+      <h1 data-i18n="about.title">De la MIAGE à SamInnova</h1>
+    </div>
+  </section>
+
+  <section>
+    <div class="container about-grid">
+      <div class="avatar-frame reveal reveal-left">
+        <span data-i18n="about.avatar.label">Photo à venir</span>
+      </div>
+      <div class="about-blocks">
+        <p class="reveal reveal-up" data-i18n="about.p1">Alpha Moussa Sow a suivi une Licence en MIAGE (Méthodes Informatiques Appliquées à la Gestion des Entreprises) à l'Université Kofi Annan de Guinée, de 2023 à 2026 — une formation qui allie développement logiciel, gestion et systèmes d'information.</p>
+        <p class="reveal reveal-up" data-reveal-delay="80" data-i18n="about.p2">Sous le nom SamInnova, il construit aujourd'hui des solutions concrètes pour des commerces et organisations locales : sites vitrines, systèmes de réservation, menus digitaux. Le passage du cadre académique à des projets réels reste au cœur de sa démarche.</p>
+        <p class="reveal reveal-up" data-reveal-delay="160" data-i18n="about.p3">Autodidacte et pragmatique, il s'appuie aussi sur des outils d'aide au développement assistée par IA — non pas comme un raccourci, mais comme un complément à une compréhension solide du code.</p>
+
+        <div class="card-grid" style="margin-top: var(--space-5);">
+          <div class="card reveal reveal-up" data-reveal-delay="0">
+            <h3 data-i18n="about.card1.title">Approche</h3>
+            <p class="text-dim" data-i18n="about.card1.text">Comprendre le besoin réel avant d'écrire une ligne de code — chaque projet part d'un problème concret à résoudre.</p>
+          </div>
+          <div class="card reveal reveal-up" data-reveal-delay="120">
+            <h3 data-i18n="about.card2.title">Aujourd'hui</h3>
+            <p class="text-dim" data-i18n="about.card2.text">En transition entre étudiant et professionnel : à la recherche de stages, de missions freelance et de premières expériences en développement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="brand" href="index.html">Sam<span>Innova</span></a>
+      <p class="footer-note" data-i18n="footer.built">Conçu &amp; développé par SamInnova.</p>
+    </div>
+    <nav aria-label="Liens de pied de page">
+      <ul class="footer-links">
+        <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+        <li><a href="projects/index.html" data-i18n="nav.projects">Projets</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        <li><a href="mailto:22nysam@gmail.com">22nysam@gmail.com</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container">
+    <p class="footer-note">© <span id="current-year">2026</span> SamInnova. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
