@@ -8,7 +8,7 @@ admin panel).
 ## Structure
 
 ```
-saminnova/
+Sow-Alpha-Moussa/
 ├── index.html            Home
 ├── about.html             About
 ├── skills.html            Skills
