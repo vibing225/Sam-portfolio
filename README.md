@@ -1,4 +1,4 @@
-# SamInnova Portfolio — Frontend Skeleton
+# Alpha Moussa Sow Portfolio — Frontend Skeleton
 
 Static frontend skeleton for Alpha Moussa Sow's portfolio, built to spec from
 `01-PROJECT-CONTEXT` and `02-BUILD-SPEC`. Built here for fast visual iteration;

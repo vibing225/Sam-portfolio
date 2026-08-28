@@ -1,4 +1,4 @@
-# HANDOFF — SamInnova Portfolio Site
+# HANDOFF — Alpha Moussa Sow Portfolio Site
 
 Read this first. It replaces having to re-explain the project in a new
 environment. Written so an AI assistant or a human picking this up in
@@ -8,9 +8,10 @@ Cursor/Windsurf knows exactly what exists, why, and what's left.
 
 ## 1. Who this is for
 
-- **Name:** Alpha Moussa Sow
-- **Activity name:** SamInnova (his real working name — never "WebWizard",
-  that's an old/outdated name)
+- **Name:** Alpha Moussa Sow — this is the site identity everywhere (nav
+  wordmark, titles, meta, hero, footer). Never "WebWizard".
+- **Activity name:** not used as site branding anymore (see the branding
+  decision below)
 - **Status:** Completed a Licence 3 in MIAGE (Méthodes Informatiques
   Appliquées à la Gestion des Entreprises) at Université Kofi Annan de
   Guinée, 2023–2026. Transitioning from student to professional — targeting
@@ -23,21 +24,16 @@ Cursor/Windsurf knows exactly what exists, why, and what's left.
   and potential freelance/business clients.
 
 ### ⚠️ Branding decision — read before touching copy
-SamInnova is real (it's his actual project/activity name, not invented) but
-**it is not an officially registered business/établissement**. Per the
-person's explicit instruction, marketing-style lines that presented it like
-an established company brand were softened to lead with **"développeur
-freelance" / "freelance developer"** instead:
-- Hero eyebrow: "Portfolio — Développeur freelance" (was "Portfolio — SamInnova")
-- Footer credit line: "Conçu & développé par un développeur freelance." (was "...par SamInnova.")
-
-**What was deliberately left alone:** the nav wordmark/logo ("Sam<span>Innova</span>")
-and the narrative content on About/Experience pages that factually describes
-him operating under the SamInnova name — that's real biography, not
-brand-inflation. **This is a judgment call, not a hard rule** — if the person
-wants the logo/name pulled back further (or restored), that's a quick edit:
-search `SamInnova` across the codebase, it now only appears in the nav
-wordmark, page `<title>` tags, meta descriptions, and About/Experience prose.
+This is a **personal portfolio**, not a company site. Per the person's
+explicit instruction:
+- The site identity is **his own name, Alpha Moussa Sow** — nav wordmark,
+  page `<title>` tags, meta descriptions, hero eyebrow, footer credit.
+- The old activity-brand framing was removed entirely from the site copy.
+- "Développeur freelance" / "freelance developer" is **not** the identity —
+  it belongs in Experience as one professional experience among others
+  (client/enterprise work alongside his studies), and in availability CTAs.
+- About/Experience prose is written in **first person** ("Mon parcours",
+  "J'ai réalisé…"), because it's his own site talking about himself.
 
 ### Confirmed real projects (the ONLY ones allowed in the Projects section)
 | Project | Type | Status |
@@ -149,10 +145,10 @@ under `prefers-reduced-motion`.
 ## 4. Site structure as it exists right now
 
 ```
-saminnova/
+Portfolio/
 ├── index.html            Home — hero, tech marquee, featured project
 │                          skeletons, CTA banner
-├── about.html             About — MIAGE journey, transition to SamInnova
+├── about.html             About — MIAGE journey, first-person narrative
 ├── skills.html            Skills — grouped by Frontend/Backend/DB/
 │                          Frameworks/Tools, icon chips, "used in project"
 │                          vs "learning" labels (not percentage bars)
@@ -176,9 +172,9 @@ saminnova/
 │                          cursor tilt), about grid, skills grid, contact
 ├── js/
 │   ├── i18n.js             FR/EN dictionary + toggle, persists to
-│                          localStorage under `saminnova-lang`
-│   ├── theme.js            Dark/light toggle, persists under
-│                          `saminnova-theme`, mirrors the i18n pattern
+│                          localStorage under `portfolio-lang`
+│   ├── theme.js            NOT PRESENT YET — dark/light toggle, to persist
+│                          under `portfolio-theme`, mirroring i18n
 │   └── main.js             Nav toggle, scroll-reveal, marquee duplication,
 │                          filter tabs, contact form validation, cursor-
 │                          glow on cards, hero parallax tilt
@@ -210,11 +206,6 @@ saminnova/
   under 860px), `prefers-reduced-motion` respected everywhere
 
 **Session 2 — this round:**
-- Softened "SamInnova" as a company-style brand in marketing copy (hero
-  eyebrow, footer credit line) to "développeur freelance" framing — see the
-  branding decision box in §1 for exactly what changed and what didn't
-- Added a dark/light theme toggle (`js/theme.js`), same UX pattern as the
-  language toggle, persisted separately, defaults to dark
 - Added more motion/"life" to the pages:
   - Hero copy now does a staggered fade-up load-in (eyebrow → h1 → lead →
     buttons), independent of scroll position
@@ -224,6 +215,17 @@ saminnova/
     cursor-following radial glow on hover, layered on top of the existing
     lift + border-glow
   - All of the above fully gated behind `prefers-reduced-motion`
+
+**Session 3 — identity refactor:**
+- Replaced the activity-brand identity with **Alpha Moussa Sow** across all
+  pages: `<title>`, meta descriptions, nav/footer wordmark, hero eyebrow,
+  footer credit line
+- Rewrote About and Experience copy in first person (FR + EN)
+- Moved the freelance framing into Experience ("Fin de Licence &
+  expériences en freelance") and availability CTAs, not the site identity
+- Renamed the language `localStorage` key to `portfolio-lang`
+- Fixed a missing comma in the EN i18n dictionary that silently broke every
+  EN translation after `footer.built`
 
 ---
 

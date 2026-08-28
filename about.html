@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>À propos — SamInnova</title>
-<meta name="description" content="Parcours d'Alpha Moussa Sow, du diplôme MIAGE au lancement de SamInnova." />
+<title>À propos — Alpha Moussa Sow</title>
+<meta name="description" content="Parcours d'Alpha Moussa Sow, de la Licence MIAGE à ses projets actuels." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,37 +19,14 @@
 
 <a class="skip-link" href="#main">Aller au contenu</a>
 
-<header class="site-nav">
-  <div class="container">
-    <a class="brand" href="index.html">Sam<span>Innova</span></a>
-    <nav aria-label="Navigation principale">
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
-        <li><a href="about.html" aria-current="page" data-i18n="nav.about">À propos</a></li>
-        <li><a href="projects/index.html" data-i18n="nav.projects">Projets</a></li>
-        <li><a href="skills.html" data-i18n="nav.skills">Compétences</a></li>
-        <li><a href="experience.html" data-i18n="nav.experience">Parcours</a></li>
-        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="nav-actions">
-      <div class="lang-toggle" data-lang="fr" role="group" aria-label="Choix de la langue">
-        <button class="lang-opt" data-val="fr" type="button">FR</button>
-        <button class="lang-opt" data-val="en" type="button">EN</button>
-      </div>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Ouvrir le menu">
-        <span></span>
-      </button>
-    </div>
-  </div>
-</header>
+<div data-include="header"></div>
 
 <main id="main">
 
   <section class="page-hero">
     <div class="container">
       <span class="eyebrow" data-i18n="about.eyebrow">À propos</span>
-      <h1 data-i18n="about.title">De la MIAGE à SamInnova</h1>
+      <h1 data-i18n="about.title">Mon parcours</h1>
     </div>
   </section>
 
@@ -59,9 +36,9 @@
         <span data-i18n="about.avatar.label">Photo à venir</span>
       </div>
       <div class="about-blocks">
-        <p class="reveal reveal-up" data-i18n="about.p1">Alpha Moussa Sow a suivi une Licence en MIAGE (Méthodes Informatiques Appliquées à la Gestion des Entreprises) à l'Université Kofi Annan de Guinée, de 2023 à 2026 — une formation qui allie développement logiciel, gestion et systèmes d'information.</p>
-        <p class="reveal reveal-up" data-reveal-delay="80" data-i18n="about.p2">Sous le nom SamInnova, il construit aujourd'hui des solutions concrètes pour des commerces et organisations locales : sites vitrines, systèmes de réservation, menus digitaux. Le passage du cadre académique à des projets réels reste au cœur de sa démarche.</p>
-        <p class="reveal reveal-up" data-reveal-delay="160" data-i18n="about.p3">Autodidacte et pragmatique, il s'appuie aussi sur des outils d'aide au développement assistée par IA — non pas comme un raccourci, mais comme un complément à une compréhension solide du code.</p>
+        <p class="reveal reveal-up" data-i18n="about.p1">J'ai suivi une Licence en MIAGE (Méthodes Informatiques Appliquées à la Gestion des Entreprises) à l'Université Kofi Annan de Guinée, de 2023 à 2026 — une formation qui allie développement logiciel, gestion et systèmes d'information.</p>
+        <p class="reveal reveal-up" data-reveal-delay="80" data-i18n="about.p2">Aujourd'hui, je conçois des solutions concrètes pour des commerces et organisations locales : sites vitrines, systèmes de réservation, menus digitaux. Le passage du cadre académique à des projets réels reste au cœur de ma démarche.</p>
+        <p class="reveal reveal-up" data-reveal-delay="160" data-i18n="about.p3">Autodidacte et pragmatique, j'utilise aussi des outils d'aide au développement assistée par IA — non pas comme un raccourci, mais comme un complément à une compréhension solide du code.</p>
 
         <div class="card-grid" style="margin-top: var(--space-5);">
           <div class="card reveal reveal-up" data-reveal-delay="0">
@@ -77,29 +54,45 @@
     </div>
   </section>
 
+  <section class="story-section">
+    <div class="container story-layout">
+      <div class="section-head reveal reveal-up">
+        <span class="eyebrow" data-i18n="experience.eyebrow">Parcours</span>
+        <h2 data-i18n="experience.title">Étapes clés</h2>
+      </div>
+
+      <ol class="story-timeline">
+        <li class="reveal reveal-left">
+          <span class="timeline-date" data-i18n="experience.item1.date">2023</span>
+          <h3 data-i18n="experience.item1.title">Début de la Licence MIAGE</h3>
+          <p class="text-dim" data-i18n="experience.item1.text">Université Kofi Annan de Guinée — première approche du développement web, des bases de données et de la gestion de projet.</p>
+        </li>
+        <li class="reveal reveal-left" data-reveal-delay="100">
+          <span class="timeline-date" data-i18n="experience.item2.date">2023 – 2026</span>
+          <h3 data-i18n="experience.item2.title">Premiers projets concrets</h3>
+          <p class="text-dim" data-i18n="experience.item2.text">J'ai réalisé des sites et systèmes réels : Brasserie Artemis, SamiSpa, menus digitaux, plateforme Gestion_Immo.</p>
+        </li>
+        <li class="reveal reveal-left" data-reveal-delay="200">
+          <span class="timeline-date" data-i18n="experience.item3.date">2026</span>
+          <h3 data-i18n="experience.item3.title">Fin de Licence &amp; expériences en freelance</h3>
+          <p class="text-dim" data-i18n="experience.item3.text">Obtention de la Licence 3 MIAGE. Structuration de mon activité et premières missions en développement web.</p>
+        </li>
+        <li class="reveal reveal-left" data-reveal-delay="300">
+          <span class="timeline-date" data-i18n="experience.item4.date">Aujourd'hui</span>
+          <h3 data-i18n="experience.item4.title">Vers le monde professionnel</h3>
+          <p class="text-dim" data-i18n="experience.item4.text">Recherche active de stage, de poste junior ou de missions freelance en développement web.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
 </main>
 
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div>
-      <a class="brand" href="index.html">Sam<span>Innova</span></a>
-      <p class="footer-note" data-i18n="footer.built">Conçu &amp; développé par SamInnova.</p>
-    </div>
-    <nav aria-label="Liens de pied de page">
-      <ul class="footer-links">
-        <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
-        <li><a href="projects/index.html" data-i18n="nav.projects">Projets</a></li>
-        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
-        <li><a href="mailto:22nysam@gmail.com">22nysam@gmail.com</a></li>
-      </ul>
-    </nav>
-  </div>
-  <div class="container">
-    <p class="footer-note">© <span id="current-year">2026</span> SamInnova. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
-  </div>
-</footer>
+<div data-include="footer"></div>
 
 <script src="js/i18n.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/includes.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

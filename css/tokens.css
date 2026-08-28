@@ -1,5 +1,5 @@
 /* ===========================================================
-   SamInnova — Design Tokens
+   Alpha Moussa Sow — Design Tokens
    Dark tech/developer theme. Reuse exactly across pages.
    =========================================================== */
 
@@ -13,6 +13,69 @@
   --text-dim: #8D97AE;
   --accent: #E8A33D;
   --accent-dim: #B9822E;
+
+  /* Semantic */
+  --success: #4CAF7D;
+  --danger: #E2604F;
+  --focus-ring: #E8A33D;
+
+  /* Typography */
+  --font-display: "Space Grotesk", "Helvetica Neue", sans-serif;
+  --font-body: "Inter", "Helvetica Neue", sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", monospace;
+
+  /* Type scale (fluid) */
+  --fs-eyebrow: clamp(0.7rem, 0.66rem + 0.2vw, 0.78rem);
+  --fs-body: clamp(0.98rem, 0.95rem + 0.15vw, 1.05rem);
+  --fs-lg: clamp(1.15rem, 1.1rem + 0.3vw, 1.35rem);
+  --fs-h3: clamp(1.4rem, 1.3rem + 0.6vw, 1.8rem);
+  --fs-h2: clamp(1.9rem, 1.6rem + 1.3vw, 2.6rem);
+  --fs-h1: clamp(2.4rem, 1.9rem + 2.6vw, 4.2rem);
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.85rem;
+  --space-4: 1.25rem;
+  --space-5: 2rem;
+  --space-6: 3.25rem;
+  --space-7: 5.25rem;
+  --space-8: 8rem;
+
+  /* Layout */
+  --max-w: 1180px;
+  --radius: 10px;
+  --radius-sm: 6px;
+  --border: 1px solid var(--line);
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 180ms;
+  --dur-med: 420ms;
+  --dur-slow: 900ms;
+}
+
+html[data-theme="light"] {
+  --bg: #F5F3EE;
+  --surface: #FFFFFF;
+  --surface-2: #ECE8DF;
+  --line: #DCD5C6;
+  --text: #171A21;
+  --text-dim: #5C6270;
+  --accent: #C97B1F;
+  --accent-dim: #A5651A;
+  --success: #2E8B57;
+  --danger: #D25646;
+  --focus-ring: #C97B1F;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur-med: 0ms;
+    --dur-slow: 0ms;
+  }
+}
 
   /* Semantic */
   --success: #4CAF7D;

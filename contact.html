@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Contact — SamInnova</title>
-<meta name="description" content="Contactez Alpha Moussa Sow (SamInnova) pour une mission freelance, un stage ou un projet." />
+<title>Contact — Alpha Moussa Sow</title>
+<meta name="description" content="Contactez Alpha Moussa Sow pour une mission freelance, un stage ou un projet." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,30 +19,7 @@
 
 <a class="skip-link" href="#main">Aller au contenu</a>
 
-<header class="site-nav">
-  <div class="container">
-    <a class="brand" href="index.html">Sam<span>Innova</span></a>
-    <nav aria-label="Navigation principale">
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
-        <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
-        <li><a href="projects/index.html" data-i18n="nav.projects">Projets</a></li>
-        <li><a href="skills.html" data-i18n="nav.skills">Compétences</a></li>
-        <li><a href="experience.html" data-i18n="nav.experience">Parcours</a></li>
-        <li><a href="contact.html" aria-current="page" data-i18n="nav.contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="nav-actions">
-      <div class="lang-toggle" data-lang="fr" role="group" aria-label="Choix de la langue">
-        <button class="lang-opt" data-val="fr" type="button">FR</button>
-        <button class="lang-opt" data-val="en" type="button">EN</button>
-      </div>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Ouvrir le menu">
-        <span></span>
-      </button>
-    </div>
-  </div>
-</header>
+<div data-include="header"></div>
 
 <main id="main">
 
@@ -98,27 +75,11 @@
 
 </main>
 
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div>
-      <a class="brand" href="index.html">Sam<span>Innova</span></a>
-      <p class="footer-note" data-i18n="footer.built">Conçu &amp; développé par SamInnova.</p>
-    </div>
-    <nav aria-label="Liens de pied de page">
-      <ul class="footer-links">
-        <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
-        <li><a href="projects/index.html" data-i18n="nav.projects">Projets</a></li>
-        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
-        <li><a href="mailto:22nysam@gmail.com">22nysam@gmail.com</a></li>
-      </ul>
-    </nav>
-  </div>
-  <div class="container">
-    <p class="footer-note">© <span id="current-year">2026</span> SamInnova. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
-  </div>
-</footer>
+<div data-include="footer"></div>
 
 <script src="js/i18n.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/includes.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

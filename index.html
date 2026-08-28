@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>SamInnova — MIAGE Web &amp; Information Systems Developer</title>
-<meta name="description" content="Portfolio d'Alpha Moussa Sow (SamInnova) — développeur web et systèmes d'information, formation MIAGE." />
+<title>Alpha Moussa Sow — MIAGE Web &amp; Information Systems Developer</title>
+<meta name="description" content="Portfolio d'Alpha Moussa Sow — développeur web et systèmes d'information, formation MIAGE." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,37 +19,14 @@
 
 <a class="skip-link" href="#main">Aller au contenu</a>
 
-<header class="site-nav">
-  <div class="container">
-    <a class="brand" href="index.html">Sam<span>Innova</span></a>
-    <nav aria-label="Navigation principale">
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html" aria-current="page" data-i18n="nav.home">Accueil</a></li>
-        <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
-        <li><a href="projects/index.html" data-i18n="nav.projects">Projets</a></li>
-        <li><a href="skills.html" data-i18n="nav.skills">Compétences</a></li>
-        <li><a href="experience.html" data-i18n="nav.experience">Parcours</a></li>
-        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="nav-actions">
-      <div class="lang-toggle" data-lang="fr" role="group" aria-label="Choix de la langue">
-        <button class="lang-opt" data-val="fr" type="button">FR</button>
-        <button class="lang-opt" data-val="en" type="button">EN</button>
-      </div>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Ouvrir le menu">
-        <span></span>
-      </button>
-    </div>
-  </div>
-</header>
+<div data-include="header"></div>
 
 <main id="main">
 
   <section class="hero">
     <div class="container">
       <div class="hero-copy">
-        <span class="eyebrow" data-i18n="hero.eyebrow">Portfolio — SamInnova</span>
+        <span class="eyebrow" data-i18n="hero.eyebrow">Portfolio — Alpha Moussa Sow</span>
         <h1 data-i18n="hero.title">Développeur Web &amp; Systèmes d'Information, formation MIAGE</h1>
         <p class="lead" data-i18n="hero.lead">Je conçois des solutions numériques concrètes — sites, applications et systèmes de gestion — à la croisée du développement web et de l'informatique de gestion.</p>
         <div class="btn-row">
@@ -84,7 +61,7 @@
 
   <div class="marquee" aria-label="Technologies utilisées">
     <span class="visually-hidden" data-i18n="marquee.eyebrow">Outils &amp; technologies</span>
-    <div class="marquee-track">
+    <div class="marquee-track" id="tech-marquee-track">
       <span class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="" /> HTML5</span>
       <span class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="" /> CSS3</span>
       <span class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" /> JavaScript</span>
@@ -100,33 +77,62 @@
     </div>
   </div>
 
-  <section>
+  <section class="home-spotlight">
     <div class="container">
       <div class="section-head reveal reveal-up">
         <span class="eyebrow" data-i18n="home.featured.eyebrow">Travaux</span>
-        <h2 data-i18n="home.featured.title">Projets récents</h2>
+        <h2 data-i18n="home.featured.title">Ce que je construis</h2>
       </div>
 
-      <div class="card-grid">
-        <div class="placeholder-card reveal reveal-up" data-reveal-delay="0">
-          <span class="eyebrow">01</span>
-          <div class="skeleton-block w-80" style="margin-top:1rem;"></div>
-          <div class="skeleton-block w-60"></div>
-          <div class="skeleton-block w-40"></div>
+      <div class="feature-grid">
+        <article class="story-card reveal reveal-up" data-reveal-delay="0">
+          <span class="eyebrow">Frontend</span>
+          <h3 data-i18n="home.skills.frontend.title">Expérience web front</h3>
+          <p class="text-dim" data-i18n="home.skills.frontend.text">Sites vitrine, interfaces claires et parcours utilisateurs pensés pour la conversion et l'accessibilité.</p>
+          <div class="mini-stat">HTML • CSS • JS</div>
+        </article>
+        <article class="story-card reveal reveal-up" data-reveal-delay="100">
+          <span class="eyebrow">Backend</span>
+          <h3 data-i18n="home.skills.backend.title">Logique métier</h3>
+          <p class="text-dim" data-i18n="home.skills.backend.text">Systèmes de gestion, dynamiques de réservation et applications PHP/Python alignées sur un besoin concret.</p>
+          <div class="mini-stat">PHP • Python • SQL</div>
+        </article>
+        <article class="story-card reveal reveal-up" data-reveal-delay="200">
+          <span class="eyebrow">Base de données</span>
+          <h3 data-i18n="home.skills.database.title">Données structurées</h3>
+          <p class="text-dim" data-i18n="home.skills.database.text">Modélisation de contenus, gestion d'informations, données en lien avec les besoins métiers et les interfaces.</p>
+          <div class="mini-stat">MySQL • SQL</div>
+        </article>
+        <article class="story-card reveal reveal-up" data-reveal-delay="300">
+          <span class="eyebrow">Croissance</span>
+          <h3 data-i18n="home.skills.growth.title">Approche professionnelle</h3>
+          <p class="text-dim" data-i18n="home.skills.growth.text">Je combine compréhension du besoin, autonomie et apprentissage continu pour livrer des solutions utiles.</p>
+          <div class="mini-stat">Stage • Freelance • Junior</div>
+        </article>
+      </div>
+
+      <div class="skills-surface reveal reveal-up" data-reveal-delay="150">
+        <div class="section-head compact">
+          <span class="eyebrow" data-i18n="skills.eyebrow">Compétences</span>
+          <h3 data-i18n="skills.title">Ce que j'utilise, et comment</h3>
         </div>
-        <div class="placeholder-card reveal reveal-up" data-reveal-delay="100">
-          <span class="eyebrow">02</span>
-          <div class="skeleton-block w-80" style="margin-top:1rem;"></div>
-          <div class="skeleton-block w-60"></div>
-          <div class="skeleton-block w-40"></div>
-        </div>
-        <div class="placeholder-card reveal reveal-up" data-reveal-delay="200">
-          <span class="eyebrow">03</span>
-          <div class="skeleton-block w-80" style="margin-top:1rem;"></div>
-          <div class="skeleton-block w-60"></div>
-          <div class="skeleton-block w-40"></div>
+        <div class="skill-stack" id="skill-stack">
+          <span class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="" />HTML5 <span class="level" data-i18n="skills.level.used">utilisé en projet</span></span>
+          <span class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="" />CSS3 <span class="level" data-i18n="skills.level.used">utilisé en projet</span></span>
+          <span class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" />JavaScript <span class="level" data-i18n="skills.level.used">utilisé en projet</span></span>
+          <span class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="" />Bootstrap <span class="level" data-i18n="skills.level.used">utilisé en projet</span></span>
+          <span class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="" />PHP <span class="level" data-i18n="skills.level.used">utilisé en projet</span></span>
+          <span class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" />Python <span class="level" data-i18n="skills.level.used">utilisé en projet</span></span>
+          <span class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="" />SQL / MySQL <span class="level" data-i18n="skills.level.used">utilisé en projet</span></span>
+          <span class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="" />Django <span class="level" data-i18n="skills.level.used">utilisé en projet</span></span>
+          <span class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="" />Laravel <span class="level" data-i18n="skills.level.learning">en apprentissage</span></span>
+          <span class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="" />Git / GitHub</span>
+          <span class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="" />VS Code</span>
+          <span class="skill-chip">FileZilla</span>
         </div>
       </div>
+
+      <div id="featured-projects" class="card-grid" style="margin-top: var(--space-6);"></div>
       <p class="footer-note reveal reveal-up" data-i18n="home.featured.note" style="margin-top:1.5rem;">Section connectée à la base de données — le contenu détaillé arrive avec les projets réels.</p>
     </div>
   </section>
@@ -145,27 +151,12 @@
 
 </main>
 
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div>
-      <a class="brand" href="index.html">Sam<span>Innova</span></a>
-      <p class="footer-note" data-i18n="footer.built">Conçu &amp; développé par SamInnova.</p>
-    </div>
-    <nav aria-label="Liens de pied de page">
-      <ul class="footer-links">
-        <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
-        <li><a href="projects/index.html" data-i18n="nav.projects">Projets</a></li>
-        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
-        <li><a href="mailto:22nysam@gmail.com">22nysam@gmail.com</a></li>
-      </ul>
-    </nav>
-  </div>
-  <div class="container">
-    <p class="footer-note">© <span id="current-year">2026</span> SamInnova. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
-  </div>
-</footer>
+<div data-include="footer"></div>
 
 <script src="js/i18n.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/includes.js"></script>
 <script src="js/main.js"></script>
+<script src="js/techs.js"></script>
 </body>
 </html>

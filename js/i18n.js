@@ -1,5 +1,5 @@
 /* ===========================================================
-   SamInnova — i18n (FR/EN)
+   Alpha Moussa Sow — i18n (FR/EN)
    Applies translations to any element with [data-i18n="key"].
    For attributes (placeholder, aria-label...), use
    [data-i18n-attr="attr:key"] (can list several separated by ;)
@@ -7,7 +7,7 @@
    =========================================================== */
 
 const SAMI18N = (() => {
-  const STORAGE_KEY = "saminnova-lang";
+  const STORAGE_KEY = "portfolio-lang";
 
   const dict = {
     fr: {
@@ -18,7 +18,7 @@ const SAMI18N = (() => {
       "nav.experience": "Parcours",
       "nav.contact": "Contact",
 
-      "hero.eyebrow": "Portfolio — SamInnova",
+      "hero.eyebrow": "Portfolio — Alpha Moussa Sow",
       "hero.title": "Développeur Web &amp; Systèmes d'Information, formation MIAGE",
       "hero.lead": "Je conçois des solutions numériques concrètes — sites, applications et systèmes de gestion — à la croisée du développement web et de l'informatique de gestion.",
       "hero.cta.projects": "Voir les projets",
@@ -27,18 +27,26 @@ const SAMI18N = (() => {
       "marquee.eyebrow": "Outils &amp; technologies",
 
       "home.featured.eyebrow": "Travaux",
-      "home.featured.title": "Projets récents",
+      "home.featured.title": "Ce que je construis",
       "home.featured.note": "Section connectée à la base de données — le contenu détaillé arrive avec les projets réels.",
+      "home.skills.frontend.title": "Expérience web front",
+      "home.skills.frontend.text": "Sites vitrine, interfaces claires et parcours utilisateurs pensés pour la conversion et l'accessibilité.",
+      "home.skills.backend.title": "Logique métier",
+      "home.skills.backend.text": "Systèmes de gestion, dynamiques de réservation et applications PHP/Python alignées sur un besoin concret.",
+      "home.skills.database.title": "Données structurées",
+      "home.skills.database.text": "Modélisation de contenus, gestion d'informations, données en lien avec les besoins métiers et les interfaces.",
+      "home.skills.growth.title": "Approche professionnelle",
+      "home.skills.growth.text": "Je combine compréhension du besoin, autonomie et apprentissage continu pour livrer des solutions utiles.",
 
       "home.cta.title": "Discutons de votre projet",
       "home.cta.text": "Disponible pour des missions freelance, un stage ou un poste junior.",
       "home.cta.btn": "Prendre contact",
 
       "about.eyebrow": "À propos",
-      "about.title": "De la MIAGE à SamInnova",
-      "about.p1": "Alpha Moussa Sow a suivi une Licence en MIAGE (Méthodes Informatiques Appliquées à la Gestion des Entreprises) à l'Université Kofi Annan de Guinée, de 2023 à 2026 — une formation qui allie développement logiciel, gestion et systèmes d'information.",
-      "about.p2": "Sous le nom SamInnova, il construit aujourd'hui des solutions concrètes pour des commerces et organisations locales : sites vitrines, systèmes de réservation, menus digitaux. Le passage du cadre académique à des projets réels reste au cœur de sa démarche.",
-      "about.p3": "Autodidacte et pragmatique, il s'appuie aussi sur des outils d'aide au développement assistée par IA — non pas comme un raccourci, mais comme un complément à une compréhension solide du code.",
+      "about.title": "Mon parcours",
+      "about.p1": "J'ai suivi une Licence en MIAGE (Méthodes Informatiques Appliquées à la Gestion des Entreprises) à l'Université Kofi Annan de Guinée, de 2023 à 2026 — une formation qui allie développement logiciel, gestion et systèmes d'information.",
+      "about.p2": "Aujourd'hui, je conçois des solutions concrètes pour des commerces et organisations locales : sites vitrines, systèmes de réservation, menus digitaux. Le passage du cadre académique à des projets réels reste au cœur de ma démarche.",
+      "about.p3": "Autodidacte et pragmatique, j'utilise aussi des outils d'aide au développement assistée par IA — non pas comme un raccourci, mais comme un complément à une compréhension solide du code.",
       "about.card1.title": "Approche",
       "about.card1.text": "Comprendre le besoin réel avant d'écrire une ligne de code — chaque projet part d'un problème concret à résoudre.",
       "about.card2.title": "Aujourd'hui",
@@ -63,10 +71,10 @@ const SAMI18N = (() => {
       "experience.item1.text": "Université Kofi Annan de Guinée — première approche du développement web, des bases de données et de la gestion de projet.",
       "experience.item2.date": "2023 – 2026",
       "experience.item2.title": "Premiers projets concrets",
-      "experience.item2.text": "Réalisation de sites et systèmes réels : Brasserie Artemis, SamiSpa, menus digitaux, plateforme Gestion_Immo.",
+      "experience.item2.text": "J'ai réalisé des sites et systèmes réels : Brasserie Artemis, SamiSpa, menus digitaux, plateforme Gestion_Immo.",
       "experience.item3.date": "2026",
-      "experience.item3.title": "Fin de Licence &amp; lancement de SamInnova",
-      "experience.item3.text": "Obtention de la Licence 3 MIAGE. Structuration de l'activité indépendante sous le nom SamInnova.",
+      "experience.item3.title": "Fin de Licence &amp; expériences en freelance",
+      "experience.item3.text": "Obtention de la Licence 3 MIAGE. Structuration de mon activité et premières missions en développement web.",
       "experience.item4.date": "Aujourd'hui",
       "experience.item4.title": "Vers le monde professionnel",
       "experience.item4.text": "Recherche active de stage, de poste junior ou de missions freelance en développement web.",
@@ -95,7 +103,7 @@ const SAMI18N = (() => {
       "contact.form.note": "Le formulaire sera relié à un traitement côté serveur lors de la phase back-end.",
 
       "footer.rights": "Tous droits réservés.",
-      "footer.built": "Conçu &amp; développé par SamInnova.",
+      "footer.built": "Conçu &amp; développé par Alpha Moussa Sow.",
 
       "admin.eyebrow": "Espace admin",
       "admin.title": "Panneau d'administration",
@@ -110,7 +118,7 @@ const SAMI18N = (() => {
       "nav.experience": "Experience",
       "nav.contact": "Contact",
 
-      "hero.eyebrow": "Portfolio — SamInnova",
+      "hero.eyebrow": "Portfolio — Alpha Moussa Sow",
       "hero.title": "MIAGE Web &amp; Information Systems Developer",
       "hero.lead": "I build practical digital solutions — websites, applications and management systems — at the intersection of web development and information systems.",
       "hero.cta.projects": "View projects",
@@ -119,18 +127,26 @@ const SAMI18N = (() => {
       "marquee.eyebrow": "Tools &amp; technologies",
 
       "home.featured.eyebrow": "Work",
-      "home.featured.title": "Recent projects",
+      "home.featured.title": "What I build",
       "home.featured.note": "This section is wired to the database — detailed content will appear once real projects are added.",
+      "home.skills.frontend.title": "Front-end web experience",
+      "home.skills.frontend.text": "Showcase sites, clear interfaces and user journeys designed for conversion and accessibility.",
+      "home.skills.backend.title": "Business logic",
+      "home.skills.backend.text": "Management systems, booking flows and PHP/Python applications shaped around a real need.",
+      "home.skills.database.title": "Structured data",
+      "home.skills.database.text": "Content modeling, information management and data systems aligned with business and interface needs.",
+      "home.skills.growth.title": "Professional approach",
+      "home.skills.growth.text": "I combine business understanding, autonomy and continuous learning to deliver useful solutions.",
 
       "home.cta.title": "Let's talk about your project",
       "home.cta.text": "Open to freelance work, internships, and junior roles.",
       "home.cta.btn": "Get in touch",
 
       "about.eyebrow": "About",
-      "about.title": "From MIAGE to SamInnova",
-      "about.p1": "Alpha Moussa Sow completed a Licence in MIAGE (Applied Computer Methods for Business Management) at Université Kofi Annan de Guinée, from 2023 to 2026 — a program combining software development, management and information systems.",
-      "about.p2": "Under the name SamInnova, he now builds practical solutions for local businesses and organizations: showcase websites, booking systems, digital menus. The shift from academic work to real client projects is central to his path.",
-      "about.p3": "Self-directed and practical, he also uses AI-assisted development tools as part of his workflow — not as a shortcut, but as a complement to a solid understanding of the code.",
+      "about.title": "My journey",
+      "about.p1": "I completed a Licence in MIAGE (Applied Computer Methods for Business Management) at Université Kofi Annan de Guinée, from 2023 to 2026 — a program combining software development, management and information systems.",
+      "about.p2": "Today, I design practical solutions for local businesses and organizations: showcase websites, booking systems, digital menus. The shift from academic work to real client projects is central to my path.",
+      "about.p3": "Self-directed and practical, I also use AI-assisted development tools as part of my workflow — not as a shortcut, but as a complement to a solid understanding of the code.",
       "about.card1.title": "Approach",
       "about.card1.text": "Understanding the real need before writing a single line of code — every project starts from an actual problem to solve.",
       "about.card2.title": "Right now",
@@ -155,10 +171,10 @@ const SAMI18N = (() => {
       "experience.item1.text": "Université Kofi Annan de Guinée — first exposure to web development, databases and project management.",
       "experience.item2.date": "2023 – 2026",
       "experience.item2.title": "First real-world projects",
-      "experience.item2.text": "Delivered real sites and systems: Brasserie Artemis, SamiSpa, digital menus, the Gestion_Immo platform.",
+      "experience.item2.text": "I delivered real sites and systems: Brasserie Artemis, SamiSpa, digital menus, the Gestion_Immo platform.",
       "experience.item3.date": "2026",
-      "experience.item3.title": "Graduated &amp; launched SamInnova",
-      "experience.item3.text": "Completed the MIAGE Licence 3. Structured independent activity under the name SamInnova.",
+      "experience.item3.title": "Graduated &amp; started freelancing",
+      "experience.item3.text": "Completed the MIAGE Licence 3. Structured my activity and took on first web development missions.",
       "experience.item4.date": "Now",
       "experience.item4.title": "Heading into the profession",
       "experience.item4.text": "Actively looking for an internship, junior role, or freelance work in web development.",
@@ -187,7 +203,7 @@ const SAMI18N = (() => {
       "contact.form.note": "This form will be wired to server-side handling during the backend phase.",
 
       "footer.rights": "All rights reserved.",
-      "footer.built": "Designed &amp; built by SamInnova.",
+      "footer.built": "Designed &amp; built by Alpha Moussa Sow.",
 
       "admin.eyebrow": "Admin area",
       "admin.title": "Admin panel",
@@ -196,41 +212,68 @@ const SAMI18N = (() => {
   };
 
   function getLang() {
-    return localStorage.getItem(STORAGE_KEY) || "fr";
+    try {
+      return localStorage.getItem(STORAGE_KEY) || "fr";
+    } catch (error) {
+      return "fr";
+    }
   }
 
   function apply(lang) {
-    document.documentElement.setAttribute("lang", lang);
+    const selected = dict[lang] ? lang : "fr";
+    document.documentElement.setAttribute("lang", selected);
+
     document.querySelectorAll("[data-i18n]").forEach((el) => {
       const key = el.getAttribute("data-i18n");
-      const val = dict[lang]?.[key];
+      const val = dict[selected]?.[key];
       if (val !== undefined) el.innerHTML = val;
     });
+
     document.querySelectorAll("[data-i18n-attr]").forEach((el) => {
-      const pairs = el.getAttribute("data-i18n-attr").split(";").filter(Boolean);
+      const pairs = (el.getAttribute("data-i18n-attr") || "").split(";").filter(Boolean);
       pairs.forEach((pair) => {
         const [attr, key] = pair.split(":").map((s) => s.trim());
-        const val = dict[lang]?.[key];
-        if (val !== undefined) el.setAttribute(attr, val);
+        const val = dict[selected]?.[key];
+        if (attr && val !== undefined) el.setAttribute(attr, val);
       });
     });
-    document.querySelectorAll(".lang-toggle").forEach((t) => t.setAttribute("data-lang", lang));
+
+    document.querySelectorAll(".lang-toggle").forEach((toggle) => {
+      toggle.setAttribute("data-lang", selected);
+      toggle.querySelectorAll(".lang-opt").forEach((btn) => {
+        const isActive = btn.getAttribute("data-val") === selected;
+        btn.setAttribute("aria-pressed", String(isActive));
+        btn.classList.toggle("is-active", isActive);
+      });
+    });
   }
 
   function setLang(lang) {
-    localStorage.setItem(STORAGE_KEY, lang);
-    apply(lang);
+    const next = dict[lang] ? lang : "fr";
+    try {
+      localStorage.setItem(STORAGE_KEY, next);
+    } catch (error) {
+      // Ignore localStorage failures gracefully.
+    }
+    apply(next);
   }
 
-  function init() {
-    const lang = getLang();
-    apply(lang);
+  function bindLangButtons() {
     document.querySelectorAll(".lang-toggle .lang-opt").forEach((btn) => {
-      btn.addEventListener("click", () => setLang(btn.getAttribute("data-val")));
+      const val = btn.getAttribute("data-val");
+      btn.setAttribute("aria-pressed", String(val === getLang()));
+      btn.onclick = () => setLang(val);
     });
   }
 
-  return { init, setLang, getLang };
+  function init() {
+    apply(getLang());
+    bindLangButtons();
+  }
+
+  return { init, setLang, getLang, apply, bindLangButtons };
 })();
 
+window.SAMI18N = SAMI18N;
 document.addEventListener("DOMContentLoaded", SAMI18N.init);
+document.addEventListener("components:loaded", SAMI18N.bindLangButtons);
