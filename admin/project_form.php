@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $technologies = (string) ($postValidator->get('technologies') ?? '');
     $project_url = $postValidator->get('project_url');
     $github_url = $postValidator->get('github_url');
-    $status = (string) $postValidator->get('status', 'draft');
+    $status = (string) $postValidator->get('status', 'published');
     $featured = !empty($_POST['featured']) ? 1 : 0;
     $imagePath = $postValidator->get('existing_image');
 
@@ -175,7 +175,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <label class="form-field">
                     <span>Statut</span>
                     <select name="status">
-                        <option value="draft" <?= (($project['status'] ?? 'draft') === 'draft') ? 'selected' : ''; ?>>Brouillon</option>
+                        <option value="draft" <?= (($project['status'] ?? 'published') === 'draft') ? 'selected' : ''; ?>>Brouillon</option>
                         <option value="published" <?= (($project['status'] ?? 'published') === 'published') ? 'selected' : ''; ?>>Publié</option>
                     </select>
                 </label>

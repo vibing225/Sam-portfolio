@@ -77,7 +77,8 @@ $flash = getFlash();
                                         <?php if (!empty($tech['logo_url'])): ?>
                                             <img src="<?= htmlspecialchars($tech['logo_url'], ENT_QUOTES, 'UTF-8'); ?>" alt="" style="width:28px; height:28px; object-fit:contain;" />
                                         <?php elseif (!empty($tech['logo_path'])): ?>
-                                            <img src="../<?= htmlspecialchars($tech['logo_path'], ENT_QUOTES, 'UTF-8'); ?>" alt="" style="width:28px; height:28px; object-fit:contain;" />
+                                            <?php $techLogoUrl = preg_match('#^https?://#i', (string) $tech['logo_path']) ? (string) $tech['logo_path'] : '/' . ltrim((string) $tech['logo_path'], '/'); ?>
+                                            <img src="<?= htmlspecialchars($techLogoUrl, ENT_QUOTES, 'UTF-8'); ?>" alt="" style="width:28px; height:28px; object-fit:contain;" />
                                         <?php else: ?>
                                             <span style="color: var(--admin-dim);">Aucun</span>
                                         <?php endif; ?>

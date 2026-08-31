@@ -41,15 +41,15 @@
         </div>
         <div class="card reveal reveal-left" data-reveal-delay="100">
           <span class="tag tag-dim" data-i18n="contact.info.email">Email</span>
-          <p style="margin-top: var(--space-3);"><a href="mailto:22nysam@gmail.com">22nysam@gmail.com</a></p>
+          <p style="margin-top: var(--space-3);"><a href="mailto:22mysam@gmail.com">22mysam@gmail.com</a></p>
         </div>
         <div class="card reveal reveal-left" data-reveal-delay="200">
           <span class="tag tag-dim" data-i18n="contact.info.phone">Téléphone</span>
-          <p style="margin-top: var(--space-3);"><a href="tel:+224612522199">+224 612 522 199</a></p>
+          <p style="margin-top: var(--space-3);"><a href="tel:+224612522199">+224 612 52 21 99</a></p>
         </div>
       </div>
 
-      <form class="card reveal reveal-right" id="contact-form" novalidate>
+      <form class="card reveal reveal-right" id="contact-form" method="post" action="contact-submit.php" novalidate>
         <div class="field">
           <label for="name" data-i18n="contact.form.name">Nom complet</label>
           <input type="text" id="name" name="name" required />
@@ -66,8 +66,8 @@
           <span class="field-error">Ce champ est requis.</span>
         </div>
         <button class="btn btn-primary" type="submit" data-i18n="contact.form.submit">Envoyer le message</button>
-        <p class="footer-note form-status" hidden>✓ Message prêt — le traitement serveur sera branché ultérieurement.</p>
-        <p class="footer-note" data-i18n="contact.form.note" style="margin-top: var(--space-4);">Le formulaire sera relié à un traitement côté serveur lors de la phase back-end.</p>
+        <p class="footer-note form-status" hidden>✓ Message envoyé avec succès.</p>
+        <p class="footer-note" data-i18n="contact.form.note" style="margin-top: var(--space-4);">Le formulaire est directement relié à l'envoi d'email du site.</p>
       </form>
 
     </div>

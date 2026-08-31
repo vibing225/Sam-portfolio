@@ -37,8 +37,21 @@ try {
     $stmt->execute();
     $projects = $stmt->fetchAll();
 
+    $normalizeImagePath = static function (?string $value): string {
+        $path = trim((string) ($value ?? ''));
+        if ($path === '') {
+            return '';
+        }
+
+        if (preg_match('#^https?://#i', $path) === 1) {
+            return $path;
+        }
+
+        return '/' . ltrim($path, '/');
+    };
+
     echo json_encode([
-        'projects' => array_map(static function (array $project): array {
+        'projects' => array_map(static function (array $project) use ($normalizeImagePath): array {
             return [
                 'id' => (int) ($project['id'] ?? 0),
                 'title' => (string) ($project['title'] ?? ''),
@@ -49,7 +62,7 @@ try {
                 'technologies' => (string) ($project['technologies'] ?? ''),
                 'project_url' => (string) ($project['project_url'] ?? ''),
                 'github_url' => (string) ($project['github_url'] ?? ''),
-                'image_path' => (string) ($project['image_path'] ?? ''),
+                'image_path' => $normalizeImagePath($project['image_path'] ?? ''),
                 'featured' => (bool) ($project['featured'] ?? false),
             ];
         }, $projects),

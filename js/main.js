@@ -88,8 +88,12 @@ function renderFeaturedProjects() {
           .slice(0, 3)
           .join(' • ');
 
-        const image = project.image_path
-          ? `<img src="${escapeHtml(project.image_path)}" alt="${escapeHtml(project.title)}" style="width:100%; height:100%; object-fit:cover; display:block;">`
+        const normalizedImage = project.image_path
+          ? (project.image_path.startsWith('http') ? project.image_path : '/' + String(project.image_path).replace(/^\/+/, ''))
+          : '';
+
+        const image = normalizedImage
+          ? `<img src="${escapeHtml(normalizedImage)}" alt="${escapeHtml(project.title)}" style="width:100%; height:100%; object-fit:cover; display:block;">`
           : `<span>${escapeHtml(project.category || 'Projet')}</span>`;
 
         return `
@@ -148,8 +152,23 @@ function initSite() {
   /* ---------- Contact form: lightweight client-side validation (visual only) ---------- */
   const contactForm = document.querySelector('#contact-form');
   if (contactForm) {
+    const statusEl = contactForm.querySelector('.form-status');
+    const urlParams = new URLSearchParams(window.location.search);
+    const success = urlParams.get('success');
+    const error = urlParams.get('error');
+
+    if (success === '1' && statusEl) {
+      statusEl.hidden = false;
+      statusEl.textContent = '✓ Message envoyé avec succès. Je vous répondrai rapidement.';
+    }
+
+    if (error === '1' && statusEl) {
+      statusEl.hidden = false;
+      statusEl.textContent = '✕ Impossible d’envoyer le message pour le moment. Merci d’écrire directement par email.';
+      statusEl.style.color = 'var(--danger)';
+    }
+
     contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
       let valid = true;
       contactForm.querySelectorAll('[required]').forEach((field) => {
         const errorEl = field.closest('.field')?.querySelector('.field-error');
@@ -160,9 +179,9 @@ function initSite() {
           errorEl.style.display = 'none';
         }
       });
-      if (valid) {
-        contactForm.querySelector('.form-status')?.removeAttribute('hidden');
-        contactForm.reset();
+
+      if (!valid) {
+        e.preventDefault();
       }
     });
   }

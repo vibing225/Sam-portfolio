@@ -63,8 +63,8 @@ try {
             <div class="container">
                 <div class="section-head reveal reveal-up">
                     <span class="eyebrow">Projets</span>
-                    <h1>Réalisations concrètes</h1>
-                    <p class="text-dim">Des projets web, applicatifs et de gestion alignés avec des besoins réels.</p>
+                    <h1>Solutions web concrètes</h1>
+                    <p class="text-dim">Des sites vitrines, outils de gestion, plateformes de réservation et applications web pensées pour des besoins réels.</p>
                 </div>
             </div>
         </section>
@@ -91,7 +91,8 @@ try {
                             <article class="story-card reveal reveal-up" style="height:100%;">
                                 <div class="project-image" style="margin-bottom: 1rem; min-height: 180px; border-radius: 16px; background: linear-gradient(135deg, rgba(232,163,61,0.15), rgba(59,130,246,0.12)); border: 1px solid rgba(255,255,255,0.08); display:flex; align-items:center; justify-content:center; color: var(--text-dim); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; overflow:hidden;">
                                     <?php if (!empty($project['image_path'])): ?>
-                                        <img src="../<?= htmlspecialchars($project['image_path'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?= htmlspecialchars($project['title'], ENT_QUOTES, 'UTF-8'); ?>" style="width:100%; height:100%; object-fit:cover; display:block;" />
+                                        <?php $projectImageUrl = preg_match('#^https?://#i', (string) $project['image_path']) ? (string) $project['image_path'] : '/' . ltrim((string) $project['image_path'], '/'); ?>
+                                        <img src="<?= htmlspecialchars($projectImageUrl, ENT_QUOTES, 'UTF-8'); ?>" alt="<?= htmlspecialchars($project['title'], ENT_QUOTES, 'UTF-8'); ?>" style="width:100%; height:100%; object-fit:cover; display:block;" />
                                     <?php else: ?>
                                         <span>Projet</span>
                                     <?php endif; ?>

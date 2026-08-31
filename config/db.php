@@ -4,10 +4,10 @@ require_once __DIR__ . '/app.php';
 
 function getDbConnection(): PDO
 {
-    $host = (string) env('DB_HOST', '127.0.0.1');
-    $dbname = (string) env('DB_NAME', 'portfolio_db');
-    $user = (string) env('DB_USER', 'root');
-    $pass = (string) env('DB_PASS', '');
+    $host = (string) env('DB_HOST', 'mysql-sowalphamoussa.alwaysdata.net');
+    $dbname = (string) env('DB_NAME', 'sowalphamoussa_db');
+    $user = (string) env('DB_USER', 'sowalphamoussa');
+    $pass = (string) env('DB_PASS', 'HJBKBKByfvjhb785');
 
     $dsn = sprintf('mysql:host=%s;dbname=%s;charset=utf8mb4', $host, $dbname);
 
