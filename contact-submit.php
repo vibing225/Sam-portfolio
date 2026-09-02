@@ -1,8 +1,9 @@
 <?php
-require_once __DIR__ . '/config/app.php';
+header('Content-Type: text/plain; charset=utf-8');
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('Location: contact.html?error=1');
+    http_response_code(405);
+    echo 'Method not allowed.';
     exit;
 }
 
@@ -11,37 +12,31 @@ $email = trim((string) ($_POST['email'] ?? ''));
 $message = trim((string) ($_POST['message'] ?? ''));
 
 if ($name === '' || $email === '' || $message === '') {
-    header('Location: contact.html?error=1');
+    http_response_code(400);
+    echo 'Missing required fields.';
     exit;
 }
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    header('Location: contact.html?error=1');
+    http_response_code(400);
+    echo 'Invalid email.';
     exit;
 }
 
-$to = (string) env('CONTACT_EMAIL', '22nysam@gmail.com');
-$from = (string) env('MAIL_FROM', 'no-reply@yourdomain.com');
-$fromName = (string) env('MAIL_FROM_NAME', 'Alpha Moussa Sow Portfolio');
-
 $subject = 'Nouveau message depuis le portfolio';
-$body = "Nom: {$name}\n";
-$body .= "Email: {$email}\n\n";
-$body .= "Message:\n{$message}\n";
+$body = "Nom: {$name}\nEmail: {$email}\n\nMessage:\n{$message}\n";
 
+$to = '22mysam@gmail.com';
 $headers = [
-    'From: ' . $fromName . ' <' . $from . '>',
+    'From: 22mysam@gmail.com',
     'Reply-To: ' . $email,
-    'X-Mailer: PHP/' . phpversion(),
     'Content-Type: text/plain; charset=UTF-8',
 ];
 
-$sent = mail($to, $subject, $body, implode("\r\n", $headers));
-
-if (!$sent) {
-    header('Location: contact.html?error=1');
+if (!mail($to, $subject, $body, implode("\r\n", $headers))) {
+    http_response_code(500);
+    echo 'Mail sending failed.';
     exit;
 }
 
-header('Location: contact.html?success=1');
-exit;
+echo 'OK';

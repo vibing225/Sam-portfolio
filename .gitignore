@@ -1,3 +1,39 @@
 .env
 .env.*
 !.env.example
+
+# Composer / PHP dependencies
+/vendor/
+/composer.lock
+
+# Local generated files / caches
+/.idea/
+/.vscode/
+*.log
+/tmp/
+.cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local uploads you may not want to version
+/uploads/
+/uploads/*
+
+# Local setup markers
+.setup-complete
+
+# Local project docs / handoff files
+HANDOFF.md
+DEPLOYMENT.md
+README.md
+
+# Project context files (local working notes / specs)
+01-PROJECT-CONTEXT.pdf
+02-BUILD-SPEC.pdf
+03-PROGRESS-AND-NEXT-STEPS.pdf
+
+# Optional: keep generated build artifacts out if used later
+/dist/
+/build/

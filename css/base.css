@@ -112,6 +112,12 @@ button, input, textarea, select {
 
 section {
   padding-block: var(--space-8);
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 92px;
+}
+
+section:first-of-type {
+  border-top: none;
 }
 
 .section-head {

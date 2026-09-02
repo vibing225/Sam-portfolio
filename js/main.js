@@ -153,20 +153,6 @@ function initSite() {
   const contactForm = document.querySelector('#contact-form');
   if (contactForm) {
     const statusEl = contactForm.querySelector('.form-status');
-    const urlParams = new URLSearchParams(window.location.search);
-    const success = urlParams.get('success');
-    const error = urlParams.get('error');
-
-    if (success === '1' && statusEl) {
-      statusEl.hidden = false;
-      statusEl.textContent = '✓ Message envoyé avec succès. Je vous répondrai rapidement.';
-    }
-
-    if (error === '1' && statusEl) {
-      statusEl.hidden = false;
-      statusEl.textContent = '✕ Impossible d’envoyer le message pour le moment. Merci d’écrire directement par email.';
-      statusEl.style.color = 'var(--danger)';
-    }
 
     contactForm.addEventListener('submit', (e) => {
       let valid = true;
@@ -182,6 +168,12 @@ function initSite() {
 
       if (!valid) {
         e.preventDefault();
+        return;
+      }
+
+      if (statusEl) {
+        statusEl.hidden = false;
+        statusEl.textContent = '✓ Votre client mail va s’ouvrir pour envoyer le message.';
       }
     });
   }
